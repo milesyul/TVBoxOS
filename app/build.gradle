@@ -102,6 +102,7 @@ android {
         }
         release {
             minifyEnabled true
+            shrinkResources true
         }
     }
 
@@ -173,7 +174,7 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.16.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.16.0'
     implementation 'me.jessyan:autosize:1.2.1'
-    implementation('com.thoughtworks.xstream:xstream:1.4.15') {
+    implementation('com.thoughtworks.xstream:xstream:1.4.20') {
         exclude group: 'xmlpull', module: 'xmlpull'
     }
     implementation 'org.greenrobot:eventbus:3.2.0'
@@ -196,8 +197,7 @@ dependencies {
     implementation 'com.github.hedzr:android-file-chooser:v1.2.0-final'
     implementation 'commons-io:commons-io:2.11.0'
     implementation 'com.googlecode.juniversalchardet:juniversalchardet:1.0.3'
-    //支持http3
-    implementation ('com.google.net.cronet:cronet-okhttp:0.1.0')
+    //支持http3（当前代码未引用 cronet，已移除 cronet-okhttp 死依赖）
 //    implementation 'com.google.android.gms:play-services-cronet:18.0.1'
     implementation ('org.chromium.net:cronet-embedded:101.4951.41')
     implementation 'org.brotli:dec:0.1.2'
